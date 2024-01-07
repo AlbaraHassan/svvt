@@ -65,11 +65,11 @@ test('test 7', async () => {
 
 test('test 8 & 9', async () => {
   await page.addItemToCart(false)
-  await page.orderItem(testData.expected.univerzalno.successFulPayment)
+  await page.orderItem(testData.expected.univerzalno.successFulPayment, testData.data)
 }, 100000)
 
 test('test 10 & 11', async () => {
-  await page.login(testData.expected.univerzalno.myAccount)
+  await page.login(testData.expected.univerzalno.myAccount, testData.data)
   await page.viewOrders(testData.expected.univerzalno.orders)
 
 }, 10000)

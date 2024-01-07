@@ -1,5 +1,5 @@
 import BasePage from "../basePage";
-import {By, until, WebDriver} from "selenium-webdriver";
+import {By, WebDriver} from "selenium-webdriver";
 
 export class Shop extends BasePage {
 
@@ -108,31 +108,40 @@ export class Shop extends BasePage {
     check && expect(addedItem).toEqual(selectedItem)
   }
 
-  async removeItemFromCart(expect: string){
+  async removeItemFromCart(expect: string) {
     await this.findElementAndClick(this.removeItem)
     await this.checkMatchingElements(this.emptyCartHeader, expect)
   }
 
-  async orderItem(expect: string){
+  async orderItem(expect: string, data: {
+                    email: string,
+                    firstName: string,
+                    lastName: string,
+                    street: string,
+                    postalCode: string,
+                    city: string,
+                    phone: string
+                  }
+  ) {
     await this.findElementAndClick(this.proceedToPayment)
     await this.findElementAndClick(this.acceptButton)
     await this.findElementAndClick(this.checkBox)
-    await this.fillInputField(this.firstName,'test')
-    await this.fillInputField(this.lastName,'test')
-    await this.fillInputField(this.street,'test')
-    await this.fillInputField(this.postalCode,'71000')
-    await this.fillInputField(this.city,'sarajevo')
-    await this.fillInputField(this.phone,'062811994')
-    await this.fillInputField(this.email,'test@test.test')
-    await this.driver.sleep(6000)
+    await this.fillInputField(this.firstName, data.firstName)
+    await this.fillInputField(this.lastName, data.lastName)
+    await this.fillInputField(this.street, data.street)
+    await this.fillInputField(this.postalCode, data.postalCode)
+    await this.fillInputField(this.city, data.city)
+    await this.fillInputField(this.phone, data.phone)
+    await this.fillInputField(this.email, data.email)
+    await this.driver.sleep(3000)
     await this.findElementAndClick(this.confirmButton)
     await this.checkMatchingElements(this.successfulPayment, expect)
   }
 
-  async login(expected:string, check: boolean = true){
+  async login(expected: string, {email, password}: { password: string, email: string }, check: boolean = true) {
     await this.findElementAndClick(this.myAccountButton)
-    await this.fillInputField(this.emailInput, "test@test.com")
-    await this.fillInputField(this.password, "test1234@Test")
+    await this.fillInputField(this.emailInput, email)
+    await this.fillInputField(this.password, password)
     await this.findElementAndClick(this.loginButton)
     check && await this.checkMatchingElements(this.myAccountHeader, expected)
   }

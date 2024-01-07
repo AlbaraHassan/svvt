@@ -6,16 +6,25 @@
     "univerzalno": {
       "totalItems": "276",
       "asc": "0,00",
-      "desc": "33.999,00",
-      "firstItem": "Nikon AF-S NIKKOR 800mm f/5.6E FL ED VR",
+      "desc": "12.731,00",
+      "firstItem": "Canon",
       "search": "Samsung",
       "category": "Mobiteli",
       "emptyCart":"Vaša korpa je trenutno prazna.",
       "successFulPayment": "Hvala. Vaša narudžba je zaprimljena.",
       "myAccount": "Moj račun",
       "orders": "Narudžbe"
-    },
+    }
+  },
+  "data": {
     "password": "test1234@Test",
-    "email": "test@test.com"
+    "email": "test@test.com",
+    "firstName": "test",
+    "lastName": "test",
+    "street": "test",
+    "postalCode": "71000",
+    "city": "sarajevo",
+    "phone": "062811994"
   }
+
 }
