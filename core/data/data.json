@@ -1,0 +1,21 @@
+{
+  "url": {
+    "univerzalno": "https://www.univerzalno.com/shop/"
+  },
+  "expected": {
+    "univerzalno": {
+      "totalItems": "276",
+      "asc": "0,00",
+      "desc": "33.999,00",
+      "firstItem": "Nikon AF-S NIKKOR 800mm f/5.6E FL ED VR",
+      "search": "Samsung",
+      "category": "Mobiteli",
+      "emptyCart":"Vaša korpa je trenutno prazna.",
+      "successFulPayment": "Hvala. Vaša narudžba je zaprimljena.",
+      "myAccount": "Moj račun",
+      "orders": "Narudžbe"
+    },
+    "password": "test1234@Test",
+    "email": "test@test.com"
+  }
+}

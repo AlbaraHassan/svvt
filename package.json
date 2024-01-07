@@ -1,0 +1,27 @@
+{
+  "name": "svvt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.ts",
+  "scripts": {
+    "test": "jest test.ts",
+    "run": "node test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "selenium-webdriver": "^4.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/jest": "^29.5.11",
+    "@types/selenium-webdriver": "^4.1.20",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
+}
