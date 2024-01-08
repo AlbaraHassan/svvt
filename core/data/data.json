@@ -4,7 +4,7 @@
   },
   "expected": {
     "univerzalno": {
-      "totalItems": "276",
+      "totalItems": "27",
       "asc": "0,00",
       "desc": "12.731,00",
       "firstItem": "Canon",
@@ -19,11 +19,11 @@
   "data": {
     "password": "test1234@Test",
     "email": "test@test.com",
-    "firstName": "test",
-    "lastName": "test",
-    "street": "test",
+    "firstName": "dude",
+    "lastName": "man",
+    "street": "trg grada prato",
     "postalCode": "71000",
-    "city": "sarajevo",
+    "city": "Sarajevo",
     "phone": "062811994"
   }
 

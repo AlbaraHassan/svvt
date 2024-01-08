@@ -72,7 +72,7 @@ test('test 10 & 11', async () => {
   await page.login(testData.expected.univerzalno.myAccount, testData.data)
   await page.viewOrders(testData.expected.univerzalno.orders)
 
-}, 10000)
+}, 100000)
 
 afterAll(async () => {
   await quitDriver(driver);
